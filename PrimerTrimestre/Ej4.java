@@ -1,4 +1,4 @@
-package com.example;
+
 
 //culpa de Marcos por decir lo de hacerlo en 3 clases
 public class Ej4 {

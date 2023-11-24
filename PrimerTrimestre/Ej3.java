@@ -1,4 +1,3 @@
-package com.example;
 
 public class Ej3 extends Thread {
     private int n; // Variable para almacenar el número de hilos.

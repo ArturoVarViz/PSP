@@ -1,7 +1,6 @@
-package com.example;
 
-public class Ej5a {
 
+public class Ej5b {
     public static void main(String[] args) {
         // Creación del primer hilo
         Thread thread1 = new Thread(new Runnable() {
@@ -21,19 +20,15 @@ public class Ej5a {
             }
         });
 
-        try {
-            // Inicio del segundo hilo
-            thread2.start();
-            // Hacemos que el hilo principal espere a que termine el hilo 2 antes de continuar
-            thread2.join();
+        // Establecimiento de la prioridad del primer hilo al mínimo
+        thread1.setPriority(Thread.MIN_PRIORITY);
+        // Establecimiento de la prioridad del segundo hilo al máximo
+        thread2.setPriority(Thread.MAX_PRIORITY);
 
-            // Inicio del primer hilo
-            thread1.start();
-            // Hacemos que el hilo principal espere a que termine el hilo 1 antes de continuar
-            thread1.join();
-        } catch (InterruptedException e) {
-            // Este bloque se ejecutará si cualquier llamada a join es interrumpida
-            e.printStackTrace();
-        }
+        // Inicio del primer hilo
+        thread1.start();
+        // Inicio del segundo hilo
+        thread2.start();
     }
 }
+

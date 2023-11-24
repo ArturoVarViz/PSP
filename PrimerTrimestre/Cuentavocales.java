@@ -1,3 +1,4 @@
+
 public class Cuentavocales {
     private static final char[] VOCALS = { 'a', 'e', 'i', 'o', 'u' };
     private int totalVocals = 0;
